@@ -48,6 +48,16 @@
     }
 }
 
+/************* SLIDER STYLERS *************/ 
+
+.slider{
+
+    .mySlides{
+        height:90vh;
+    }
+
+}
+
 /*********** INDEX STYLES ***********/
 body {
     background-color: #f2e6d9;
@@ -57,7 +67,7 @@ body {
 .slider {
     background-color: white;
     border: 1px solid black;
-    padding: 50px;
+    // padding: 50px;
     height: 500px;
 }
 

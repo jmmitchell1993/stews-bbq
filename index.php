@@ -16,7 +16,9 @@
 <body>
     <?php require 'base/public/navigation.php'; ?>
     <div class="slider">
-        <!-- SLIDER GOES HERE -->
+        <img class="mySlides" src="images/banner.jpg" style="width:100%">
+        <img class="mySlides" src="images/carryout.jpg" style="width:100%">
+        <img class="mySlides" src="images/delivery.jpg" style="width:100%">
     </div>
     <div class="service-wrapper">
         <div class="service-blocks"><a href="#"><img src="images/catering.jpg" width="100%"/>
@@ -58,7 +60,7 @@
 
 
     <?php require 'base/public/footer.php'; ?>
-
+    <script src="js/slideshow.js"></script>
     
 </body>
 </html>
