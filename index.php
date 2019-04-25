@@ -1,7 +1,3 @@
-<?php
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +16,9 @@
         <img class="mySlides" src="images/carryout.jpg" style="width:100%">
         <img class="mySlides" src="images/delivery.jpg" style="width:100%">
     </div>
+
     <div class="service-wrapper">
-        <div class="service-blocks"><a href="#"><img src="images/catering.jpg" width="100%"/>
+        <div class="service-blocks"><a href="catering.php"><img src="images/catering.jpg" width="100%"/>
             <div class="centered">01.<br>CATERING</div></a>
         </div>
         <div class="service-blocks"><a href="#"><img src="images/carryout.jpg" width="100%"/>
@@ -31,6 +28,7 @@
             <div class="centered">03.<br>DELIVERY</div></a>
         </div>  
     </div>
+
     <div class="location-wrapper">
         <p>LOCATED IN DES MOINES, IOWA</p>
         <img src="images/store-front.jpg" alt="Stew's Smoke Shack"/>
