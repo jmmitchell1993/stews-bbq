@@ -9,16 +9,10 @@
 /*********** NAV STYLES ***********/
 .nav-container {
   display: flex;
-  overflow: hidden;
   background-color: black;
 }
 .nav-container img {
-  border-left: 1px solid #aba69b;
   padding: 0 30px;
-}
-.nav-container .block {
-  margin: auto;
-  display: inline-flex;
 }
 
 .nav-item {
@@ -26,6 +20,7 @@
   background-color: black;
   border-top: 1px solid #aba69b;
   border-left: 1px solid #aba69b;
+  border-right: 1px solid #aba69b;
   margin-top: -1px;
   margin-left: -1px;
   text-align: center;
@@ -39,7 +34,6 @@
   color: white;
   font-weight: bold;
   letter-spacing: 1px;
-  padding: 0 95px;
 }
 .nav-item a:hover {
   color: #e67837;
