@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Stews";
+  src: url("../fonts/stews.otf");
+}
+@font-face {
+  font-family: "Stew-Light";
+  src: url("../fonts/stew.otf");
+}
+/*********** NAV STYLES ***********/
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background-color: black;
+}
+.nav-container img {
+  border-left: 1px solid #aba69b;
+  padding: 0 30px;
+}
+.nav-container .block {
+  margin: auto;
+  display: inline-flex;
+}
+
+.nav-item {
+  flex: 1 1 20em;
+  background-color: black;
+  border-top: 1px solid #aba69b;
+  border-left: 1px solid #aba69b;
+  margin-top: -1px;
+  margin-left: -1px;
+  text-align: center;
+  padding: 42px;
+}
+.nav-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0 95px;
+}
+.nav-item a:hover {
+  color: #e67837;
+}
+
+/*********** INDEX STYLES ***********/
+body {
+  background-color: #f2e6d9;
+  margin: 0 auto;
+}
+
+.slider {
+  background-color: white;
+  border: 1px solid black;
+  padding: 50px;
+  height: 500px;
+}
+
+.service-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.service-wrapper > .service-blocks {
+  width: 500px;
+  margin: 35px;
+  text-align: center;
+  position: relative;
+  opacity: 0.8;
+}
+.service-wrapper > .service-blocks:hover {
+  opacity: 1;
+}
+.service-wrapper > .service-blocks .centered {
+  position: absolute;
+  font-family: Stews;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  text-shadow: 2px 2px 12px #030303;
+  font-size: 2.8em;
+  letter-spacing: 5px;
+}
+
+.location-wrapper, .announcement-wrapper, .about-wrapper {
+  text-align: center;
+  width: 100%;
+}
+.location-wrapper p, .announcement-wrapper p, .about-wrapper p {
+  font-family: Stews;
+  font-size: 3.4em;
+  letter-spacing: 3px;
+  color: #AC2A29;
+  margin-bottom: 30px;
+}
+.location-wrapper p + p, .announcement-wrapper p + p, .about-wrapper p + p {
+  font-size: 20px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: auto;
+  width: 59%;
+}
+
+.cta-banner {
+  margin-top: 75px;
+  position: relative;
+}
+.cta-banner img {
+  height: 200px;
+  opacity: 0.65;
+}
+.cta-banner .centered {
+  position: absolute;
+  font-family: Stews;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  text-shadow: 2px 2px 12px #030303;
+  font-size: 4em;
+  letter-spacing: 7px;
+  text-align: center;
+}
+
+.temp {
+  height: 300px;
+  border: 1px solid black;
+}
+
+.btn {
+  background-color: #F58220;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  margin: 33px 0;
+  cursor: pointer;
+}
+.btn:hover {
+  border: 3px solid #AC2A29;
+}
+.btn a {
+  color: white;
+  font-family: Stew-Light;
+  font-size: 19px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/*********** FOOTER STYLES ***********/
+footer {
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+  height: 145px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-top: 105px;
+}
+footer .footer-item {
+  flex: 1 1 20em;
+  border-top: 1px solid #aba69b;
+  border-left: 1px solid #aba69b;
+  margin-top: -1px;
+  margin-left: -1px;
+  text-align: center;
+  padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+footer .block {
+  margin: auto;
+  display: inline-flex;
+}
+footer .copyright {
+  font-size: 14px;
+  margin-top: 15px;
+}
+footer .fa.fa-facebook-f {
+  color: white;
+  font-size: 2em;
+  margin-top: -9px;
+  margin-bottom: 15px;
+}
+footer .fa.fa-facebook-f:hover {
+  color: #3c5a99;
+}
+
+/*# sourceMappingURL=stews.css.map */
