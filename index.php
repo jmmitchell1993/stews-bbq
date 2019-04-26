@@ -14,9 +14,9 @@
     <?php require 'base/public/navigation.php'; ?>
 
     <div class="slider"> <!-- Replace images -->
-        <img class="mySlides" src="images/banner.jpg" style="width:100%">
-        <img class="mySlides" src="images/carryout.jpg" style="width:100%">
-        <img class="mySlides" src="images/delivery.jpg" style="width:100%">
+        <img class="mySlides" src="images/slide1.jpg" style="width:100%">
+        <img class="mySlides" src="images/slide2.jpg" style="width:100%">
+        <img class="mySlides" src="images/slide3.jpg" style="width:100%">
     </div>
 
     <div class="service-wrapper">
@@ -42,9 +42,8 @@
     </div>
 
     <div class="announcement-wrapper">
-        <p>ANNOUNCEMENTS</p>
-        <div class="temp"></div> <!-- temp container -->
-    </div>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheSmokeShackByStew%2F&tabs=timeline&width=500&height=650&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="500" height="650" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    </div> 
 
     <div class="about-wrapper">
         <p>WHO'S STEW?</p>
