@@ -115,6 +115,10 @@
 
         if(textarea_error != null) {
             textarea_error.focus();
+        } else {
+            var input_name = document.querySelector("input.name");
+
+            input_name.focus();
         }
     }
 
