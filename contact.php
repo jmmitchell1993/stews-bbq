@@ -105,9 +105,18 @@
 
     <script type="text/javascript">
 
-    //autofocus name
-    var input_name = document.getElementById("name");
-    input_name.focus();
+    //autofocus errors
+    var input_error = document.querySelector("input.error");
+    
+    if(input_error != null) {
+        input_error.focus();
+    } else {
+        var textarea_error = document.querySelector("textarea.error");
+
+        if(textarea_error != null) {
+            textarea_error.focus();
+        }
+    }
 
     //make textareas submit on enter
         var eles = document.getElementsByTagName("textarea");
