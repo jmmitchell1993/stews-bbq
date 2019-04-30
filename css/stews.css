@@ -52,19 +52,40 @@
 .nav-container a.icon {
   display: none; }
 
+.fa {
+  font-size: 3.5em;
+  border: solid 1px white;
+  color: white; }
+
 @media screen and (max-width: 600px) {
   .nav-container div {
     display: none; }
 
   .nav-container a.icon {
+    float: right;
     display: block;
-    position: absolute;
-    right: 25px;
-    top: 50px;
-    border: solid 1px blue; }
+    padding-left: 290px; } }
+@media screen and (max-width: 600px) {
+  .nav-container.responsive {
+    position: relative;
+    display: flex;
+    flex-direction: column; }
 
-  .fa {
-    font-size: 3.5em; } }
+  .nav-container.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  .nav-container.responsive .nav-item {
+    float: none;
+    display: block; }
+
+  .nav-item {
+    flex: none; }
+
+  .stewsLogo {
+    border-top: white solid 1px;
+    text-align: center; } }
 /************* SLIDER STYLERS *************/
 .slider .mySlides {
   height: 90vh; }
