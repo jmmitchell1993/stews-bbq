@@ -25,7 +25,7 @@
 		</div>
 
 		<div class="delivery_items">
-			
+
 			<a href="https://www.doordash.com/store/woodys-smoke-shack-des-moines-493596/"><img src="optimized/doordash.png" alt="Door Dash"/></a></p>
 			
 		</div>

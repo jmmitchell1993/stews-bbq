@@ -38,14 +38,6 @@
     .delivery_container .delivery_items .delivery_name-link {
       text-align: center; }
 
-@media only screen and (max-width: 320px) {
-  .delivery_items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
-    .delivery_items .delivery_name-link {
-      text-align: center; } }
 /*********** NAV STYLES ***********/
 .nav-container {
   display: flex;
