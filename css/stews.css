@@ -18,6 +18,34 @@
   .container .phone_number_catering {
     font-family: 'Stew-Light'; }
 
+/************Delivery Styles*************/
+.title_delivery {
+  text-align: center; }
+
+.phone_number_delivery {
+  text-align: center; }
+
+.delivery_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .delivery_container .delivery_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .delivery_container .delivery_items .delivery_name-link {
+      text-align: center; }
+
+@media only screen and (max-width: 320px) {
+  .delivery_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .delivery_items .delivery_name-link {
+      text-align: center; } }
 /*********** NAV STYLES ***********/
 .nav-container {
   display: flex;
