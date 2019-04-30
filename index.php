@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <?php require 'base/public/navigation.php'; ?>
 
     <div class="slider"> <!-- Replace images -->
