@@ -63,7 +63,7 @@
             <div class="row">
                 <div class="col_6_12 d-center">
                     <form id="contact__form" method="POST">
-                        <h1>Contact us today!</h1>
+                        <h1>Contact us!</h1>
                         2511 Cottage Grove Des Moines, Iowa 50311<br/>
                         (515) 277-0005<br/>
                         Monday - Saturday (11:00 AM - 8:00 PM)<br/>
@@ -71,18 +71,18 @@
                         
                         <?php if(isset($errors) and count($errors) > 0) { ?>
                             <div class="errors">
-                                <span style="color:red;">Please fill out the following fields</span>
+                                <span style="color:red;">Please fill out the following fields: </span>
                             </div>
                          <?php } ?>
-                        <label for="name">Name: </label>
+                        <label for="name"><span class="required">&#42;</span> Name: </label>
                             <input type="text" class="name <?php echo (isset($errors['name']) ? 'error' : ''); ?>" id="name" name="name" value="<?php echo (isset($data['name']) ? $data['name'] : ''); ?>"/>
-                        <label for="subject">Subject: </label>
+                        <label for="subject"><span class="required">&#42;</span> Subject: </label>
                             <input type="text" class="subject <?php echo (isset($errors['subject']) ? 'error' : ''); ?>" id="subject" name="subject" value="<?php echo (isset($data['subject']) ? $data['subject'] : ''); ?>"/>
                         <label for="phone">Phone: </label>
                             <input type="phone" placeholder="(xxx) xxx-xxxx" class="phone <?php echo (isset($errors['phone']) ? 'error' : ''); ?>" id="phone" name="phone" optional value="<?php echo (isset($data['phone']) ? $data['phone'] : ''); ?>"/>
                         <label for="email">Email Address: </label>
                             <input type="email" class="email <?php echo (isset($errors['email']) ? 'error' : ''); ?>" id="email" name="email" optional value="<?php echo (isset($data['email']) ? $data['email'] : ''); ?>"/>
-                        <label for="message">Message: </label>
+                        <label for="message"><span class="required">&#42;</span> Message: </label>
                             <textarea class="<?php echo (isset($errors['message']) ? 'error' : ''); ?>" rows="10" name="message"><?php echo (isset($data['message']) ? $data['message'] : ''); ?></textarea>
                         <div class="submit">
                             <input class="btn" type="submit" value="Send Message"/>
@@ -103,5 +103,28 @@
         </div>
         <?php require 'base/public/footer.php'; ?>
 
+    <script type="text/javascript">
+
+    //autofocus name
+    var input_name = document.getElementById("name");
+    input_name.focus();
+
+    //make textareas submit on enter
+        var eles = document.getElementsByTagName("textarea");
+        for(let ele of eles) {
+            ele.onkeypress = function(e) {
+                if(e.keyCode == 13) {
+                    document.getElementById("contact__form").submit();
+                }
+            }
+        }
+    
+    //make window submit on enter
+        window.onkeypress = function(e) {
+            if(e.keyCode == 13) {
+                document.getElementById("contact__form").submit();
+            }
+        }
+    </script>
     </body>
 </html>
