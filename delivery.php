@@ -20,25 +20,25 @@
 	
 		<div class="delivery_items">
 
-			<a href="https://www.mytown2go.com/order/restaurant/stews-smoke-shack/7630"><img src="optimized/mytown.png" alt="My Town 2 Go"/></a>
+			<a href="https://www.mytown2go.com/order/restaurant/stews-smoke-shack/7630"><img src="images/mytown.png" alt="My Town 2 Go"/></a>
 
 		</div>
 
 		<div class="delivery_items">
 
-			<a href="https://www.doordash.com/store/woodys-smoke-shack-des-moines-493596/"><img src="optimized/doordash.png" alt="Door Dash"/></a></p>
+			<a href="https://www.doordash.com/store/woodys-smoke-shack-des-moines-493596/"><img src="images/doordash.png" alt="Door Dash"/></a></p>
 			
 		</div>
 		
 		<div class="delivery_items">
 
-			<a href="https://www.grubhub.com/restaurant/stews-smoke-shack-2511-cottage-grove-ave-des-moines/1124348"><img src="optimized/grubhub.png" alt="Grub Hub"/></a>			
+			<a href="https://www.grubhub.com/restaurant/stews-smoke-shack-2511-cottage-grove-ave-des-moines/1124348"><img src="images/grubhub.png" alt="Grub Hub"/></a>			
 					
 		</div>
 
 		<div class="delivery_items">
 
-			<a href="https://www.seamless.com/menu/stews-smoke-shack-2511-cottage-grove-ave-des-moines/1124348"><img src="optimized/seamless.png" alt="Seamless"/></a>
+			<a href="https://www.seamless.com/menu/stews-smoke-shack-2511-cottage-grove-ave-des-moines/1124348"><img src="images/seamless.png" alt="Seamless"/></a>
 		
 		</div>
 		
