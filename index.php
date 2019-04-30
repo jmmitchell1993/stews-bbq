@@ -23,10 +23,10 @@
         <div class="service-blocks"><a href="catering.php"><img src="images/catering.jpg" width="100%"/>
             <div class="centered">01.<br>CATERING</div></a>
         </div>
-        <div class="service-blocks"><a href="#"><img src="images/carryout.jpg" width="100%"/>
+        <div class="service-blocks"><a href="delivery.php"><img src="images/carryout.jpg" width="100%"/>
             <div class="centered">02.<br>CARRY OUT</div></a>
         </div>
-        <div class="service-blocks"><a href="#"><img src="images/delivery.jpg" width="100%"/>
+        <div class="service-blocks"><a href="delivery.php"><img src="images/delivery.jpg" width="100%"/>
             <div class="centered">03.<br>DELIVERY</div></a>
         </div>  
     </div>
