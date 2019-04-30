@@ -1,0 +1,68 @@
+            :focus {
+                outline: none !important;
+            }
+
+            .wrap {
+                width: 100%;
+                height: auto;
+                margin-top: 105px;
+            }
+
+            input[type="submit"] {
+                width: 25%;
+            }
+
+            .submit, .success{
+                display: flex;
+                justify-content: center;
+            }
+            
+            .d-center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #contact__form {
+                width: 75%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #contact__form > input, #contact__form > textarea {
+                margin-bottom: 1em;
+                padding: 0.2em;
+                font-size: 17px;
+            }
+
+            #contact__form > textarea {
+                resize: vertical;
+            }
+
+            #contact__form > label {
+                padding: 0.2em 0.2em 0.2em 0em;
+            }
+			.error {
+				border: 1px solid red;
+            }
+            .row {
+                display: flex;
+                justify-content: start;
+                flex-wrap: wrap;
+                width: 100%;
+                height: auto;
+            }
+            .col_6_12 {
+                width: 50%;
+            }
+            .submit input {
+                color: white;
+                font-family: Stew-Light;
+                font-size: 19px;
+                text-decoration: none;
+                letter-spacing: 1px;
+            }
+            .submit input:hover {
+                color: #AC2A29;
+            }

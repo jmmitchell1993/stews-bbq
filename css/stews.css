@@ -4,9 +4,6 @@
 @font-face {
   font-family: 'Stew-Light';
   src: url("../fonts/stew.otf"); }
-* {
-  box-sizing: border-box; }
-
 /***********  CATERING STYLES **********/
 .container {
   width: 100%;
@@ -49,22 +46,6 @@
     .nav-item a:hover {
       color: #e67837; }
 
-.nav-container a.icon {
-  display: none; }
-
-@media screen and (max-width: 600px) {
-  .nav-container div {
-    display: none; }
-
-  .nav-container a.icon {
-    display: block;
-    position: absolute;
-    right: 25px;
-    top: 50px;
-    border: solid 1px blue; }
-
-  .fa {
-    font-size: 3.5em; } }
 /************* SLIDER STYLERS *************/
 .slider .mySlides {
   height: 90vh; }
@@ -202,14 +183,5 @@ footer {
     margin-top: -2px; }
     footer .fa.fa-facebook-f:hover {
       color: #3c5a99; }
-
-/* Media Query */
-@media screen and (max-width: 600px) {
-  .service-wrapper {
-    display: flex;
-    flex-direction: column; }
-
-  .centered {
-    font-size: 2.5em !important; } }
 
 /*# sourceMappingURL=stews.css.map */
