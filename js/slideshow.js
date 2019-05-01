@@ -25,7 +25,7 @@ function carousel() {
 
 
 function myFunction() {
-    var x = document.getElementById("myTopnav");
+    var x = document.getElementById("myTopNav");
     if (x.className === "nav-container") {
       x.className += " responsive";
     } else {

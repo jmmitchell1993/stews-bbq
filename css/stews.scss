@@ -8,6 +8,11 @@
     src: url('../fonts/stew.otf');
 }
 
+* {
+    box-sizing: border-box;
+  }
+  
+
 /***********  CATERING STYLES **********/ 
 
 .container {
@@ -95,6 +100,52 @@
     }
 }
 
+
+.nav-container a.icon {
+    display: none;
+  }
+  
+  .fa {
+    font-size: 3.5em;
+    border: solid 1px white;
+    color: white;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .nav-container div {display: none;}
+    .nav-container a.icon {
+      float: right;
+      display: block;
+      padding-left: 290px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .nav-container.responsive {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .nav-container.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav-container.responsive .nav-item {
+      float: none;
+      display: block;
+    }
+  
+    .nav-item {
+      flex: none;
+    }
+    .stewsLogo {
+      border-top: white solid 1px;
+      text-align: center;
+    }
+  }
+
 /************* SLIDER STYLERS *************/ 
 
 .slider {
@@ -141,6 +192,20 @@ body {
         letter-spacing: 5px;
     }
 }
+
+/* Service Wrapper Media Query */
+
+@media screen and (max-width: 600px) {
+    .service-wrapper {
+    display: flex;
+    flex-direction: column;
+    }
+   
+    .centered {
+      font-size: 2.5em !important;
+    }
+  
+  } 
 
 .location-wrapper, .announcement-wrapper, .about-wrapper {
     text-align: center;
@@ -281,5 +346,24 @@ footer {
         &:hover {
             color: #3c5a99;
         }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .footerGroup {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    footer .footer-item {
+        padding: 0; 
+        line-height: 1;
+        border-left: solid white 1px;
+    }
+
+    footer .block {
+        padding-top: 30px;
     }
 }
