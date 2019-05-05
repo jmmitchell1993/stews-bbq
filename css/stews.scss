@@ -8,6 +8,25 @@
     src: url('../fonts/stew.otf');
 }
 
+/*
+    all of the media queries for all of the phones, tablets and laptops
+    style from smallest to largest
+    when making a style go to necessary selector and use,
+
+    @include phoneMedium{
+        add styles for 320px and up here
+        anything below will not go here
+    }
+
+    everything that goes after the @include can be found in the _media_queries.scss file
+
+    if you need to change media queries don't change them in the _media_queries.scss file,
+    instead make a custom one in this file as anything changed in _media_queries.scss file will
+    affect every selector that it is attributed to.
+
+*/
+@import "_media_queries";
+
 * {
     box-sizing: border-box;
   }
@@ -61,6 +80,8 @@
 }
 
 /*********** NAV STYLES ***********/
+
+
 .nav-container {
     display: flex;
     background-color: black;
@@ -72,7 +93,7 @@
     // .block {
     //     margin: auto;  **BREAKS AT 1260px - Add margin: auto to media query
     // }
-}
+
   
 .nav-item {
     flex: 1 1 20em;
@@ -84,6 +105,18 @@
     margin-left: -1px;
     text-align: center;
     padding: 42px;
+    border-bottom: 1px solid #aba69b;
+
+    @include phoneMedium{
+
+        display: none;
+    
+    }
+
+    @include laptop{
+
+        display: block;
+    }
 
     a {
         text-decoration: none;
@@ -99,30 +132,31 @@
         } 
     }
 }
-
-
+}
 .nav-container a.icon {
-    display: none;
-  }
-  
-  .fa {
-    font-size: 3.5em;
-    border: solid 1px white;
-    color: white;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .nav-container div {display: none;}
-    .nav-container a.icon {
-      float: right;
-      display: block;
-      padding-left: 290px;
+    display: block;
+    text-align: right;
+    padding-right: 10px;
+
+    @include phoneMedium{
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    @include phoneLarge{
+        width: 300px;
+    }
+
+    @include tablet{
+        width: 640px;
+    }
+
+    @include laptop{
+        display:none;
     }
   }
-  
-  
-  @media screen and (max-width: 600px) {
-    .nav-container.responsive {
+
+  .nav-container.responsive {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -134,16 +168,47 @@
     }
     .nav-container.responsive .nav-item {
       float: none;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   
     .nav-item {
       flex: none;
     }
+
     .stewsLogo {
-      border-top: white solid 1px;
-      text-align: center;
-    }
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        @include laptop{
+            border-bottom: 1px solid #aba69b;
+        }
+        img{
+            width: 120px;
+            height: 70.797px;
+            padding-right: 8px;
+
+            @include laptop{
+                width: 200px;
+                height: 140px;
+            }
+        }
+      }
+
+
+  
+  .fa {
+    font-size: 3.5em;
+    color: white;
+  }
+
+  @include phoneMedium{
+
+    
   }
 
 /************* SLIDER STYLERS *************/ 
@@ -152,6 +217,10 @@
 
     .mySlides {
         height:90vh;
+    }
+
+    @include tablet{
+        width: 100%;
     }
 
 }
@@ -165,11 +234,12 @@ body {
 .service-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 70px;
 }
   
 .service-wrapper > .service-blocks {
-    width: 500px;
+    // width: 500px;
     margin: 35px;
     text-align: center;
     position: relative;
@@ -188,24 +258,72 @@ body {
         width: 100%;
         color: white;
         text-shadow: 2px 2px 12px #030303;
-        font-size: 2.8em;
+        font-size: 1.8em;
         letter-spacing: 5px;
+
+        @include tablet{
+
+            font-size:1.3em;
+        
+        }
+
+        @include laptop{
+
+            font-size:1.6em;
+        
+        }
+
+        @include laptopLarge{
+
+            font-size:2.1em;
+        
+        }
     }
+
+    
 }
 
 /* Service Wrapper Media Query */
 
-@media screen and (max-width: 600px) {
     .service-wrapper {
-    display: flex;
-    flex-direction: column;
+
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+        }
+
+        .service-blocks{
+            a{
+                img{
+                    width: 250px;
+                    height: 165.5px;
+
+                    @include phoneMedium{
+                        width: 300px;
+                        height: 200px;
+                    }
+
+                    @include tablet{
+                        width: 180px;
+                        height: 165px;
+                    }
+
+                    @include laptop{
+                        width: 235px;
+                        height: 215px;
+                    }
+
+                    @include laptopLarge{
+                        width: 350px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
     }
-   
-    .centered {
-      font-size: 2.5em !important;
-    }
-  
-  } 
+
 
 .location-wrapper, .announcement-wrapper, .about-wrapper {
     text-align: center;
@@ -217,6 +335,10 @@ body {
         letter-spacing: 3px;
         color: #AC2A29;
         margin-bottom: 30px;
+
+        @include phoneMedium{
+            font-size: 2.8em;
+        }
     }
 
     p + p {
@@ -227,11 +349,59 @@ body {
         line-height: 1.5;
         margin: auto;
         width: 59%;
+
+        @include phoneMedium{
+            font-size: 1em;
+            width: 90%;
+        }
+
+        @include laptop{
+            font-size: 1.1em;
+        }
+
+        @include laptopLarge{
+            font-size: 1.3em;
+        }
     }
+}
+
+@include phoneMedium{
+
+    .location-wrapper{
+
+        p{
+            font-size: 2em;
+        }
+
+        img{
+            width:300px;
+            height: 250px;
+            justify-content: center;
+            align-items: center;
+
+            @include laptopLarge{
+                width: 425px;
+                height: 375px;
+            }
+        }
+    }
+
 }
 
 iframe {
     margin-top: 80px;
+}
+
+.facebook_iframe{
+    width: 320px;
+
+    @include phoneLarge{
+        width: 400px
+    }
+
+    @include smallTablet{
+        width: 500px
+    }
 }
 
 .cta-banner {
@@ -252,7 +422,7 @@ iframe {
         width: 100%;
         color: white;
         text-shadow: 2px 2px 12px #030303;
-        font-size: 4em;
+        font-size: 2.3em;
         letter-spacing: 7px;
         text-align: center;
     }
@@ -304,6 +474,24 @@ footer {
     overflow: hidden;
     margin-top: 105px;
     
+    @include tablet{
+
+        display: inherit;
+        flex-wrap: inherit;
+
+    }
+
+    .footerGroup{
+
+        @include tablet{
+
+            display: flex;
+            flex-direction: row;
+
+        }
+
+    }
+
     .footer-item {
         flex: 1 1 20em;
         border-top: 1px solid #aba69b;
@@ -318,6 +506,10 @@ footer {
     .block {
         margin: auto;
         display: inline-flex;
+
+        @include phoneMedium{
+            font-size: 13px;
+        }
     }
 
     .elements{
@@ -333,7 +525,11 @@ footer {
         padding: 0;
 
         .copyright {
-            font-size: 14px;
+            font-size: 8px;
+
+            @include phoneMedium{
+                font-size: 10px;
+            }
         }
     }
     

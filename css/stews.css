@@ -4,6 +4,23 @@
 @font-face {
   font-family: 'Stew-Light';
   src: url("../fonts/stew.otf"); }
+/*
+    all of the media queries for all of the phones, tablets and laptops
+    style from smallest to largest
+    when making a style go to necessary selector and use,
+
+    @include phoneMedium{
+        add styles for 320px and up here
+        anything below will not go here
+    }
+
+    everything that goes after the @include can be found in the _media_queries.scss file
+
+    if you need to change media queries don't change them in the _media_queries.scss file,
+    instead make a custom one in this file as anything changed in _media_queries.scss file will
+    affect every selector that it is attributed to.
+
+*/
 * {
   box-sizing: border-box; }
 
@@ -47,68 +64,98 @@
   background-color: black; }
   .nav-container img {
     padding: 0 30px; }
-
-.nav-item {
-  flex: 1 1 20em;
-  background-color: black;
-  border-top: 1px solid #aba69b;
-  border-left: 1px solid #aba69b;
-  border-right: 1px solid #aba69b;
-  margin-top: -1px;
-  margin-left: -1px;
-  text-align: center;
-  padding: 42px; }
-  .nav-item a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 26px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 1px; }
-    .nav-item a:hover {
-      color: #e67837; }
+  .nav-container .nav-item {
+    flex: 1 1 20em;
+    background-color: black;
+    border-top: 1px solid #aba69b;
+    border-left: 1px solid #aba69b;
+    border-right: 1px solid #aba69b;
+    margin-top: -1px;
+    margin-left: -1px;
+    text-align: center;
+    padding: 42px;
+    border-bottom: 1px solid #aba69b; }
+    @media only screen and (min-width: 320px) {
+      .nav-container .nav-item {
+        display: none; } }
+    @media only screen and (min-width: 1024px) {
+      .nav-container .nav-item {
+        display: block; } }
+    .nav-container .nav-item a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 26px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 1px; }
+      .nav-container .nav-item a:hover {
+        color: #e67837; }
 
 .nav-container a.icon {
-  display: none; }
+  display: block;
+  text-align: right;
+  padding-right: 10px; }
+  @media only screen and (min-width: 320px) {
+    .nav-container a.icon {
+      width: 200px;
+      margin-top: 10px; } }
+  @media only screen and (min-width: 425px) {
+    .nav-container a.icon {
+      width: 300px; } }
+  @media only screen and (min-width: 768px) {
+    .nav-container a.icon {
+      width: 640px; } }
+  @media only screen and (min-width: 1024px) {
+    .nav-container a.icon {
+      display: none; } }
+
+.nav-container.responsive {
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+
+.nav-container.responsive a.icon {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.nav-container.responsive .nav-item {
+  float: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.nav-item {
+  flex: none; }
+
+.stewsLogo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (min-width: 1024px) {
+    .stewsLogo {
+      border-bottom: 1px solid #aba69b; } }
+  .stewsLogo img {
+    width: 120px;
+    height: 70.797px;
+    padding-right: 8px; }
+    @media only screen and (min-width: 1024px) {
+      .stewsLogo img {
+        width: 200px;
+        height: 140px; } }
 
 .fa {
   font-size: 3.5em;
-  border: solid 1px white;
   color: white; }
 
-@media screen and (max-width: 600px) {
-  .nav-container div {
-    display: none; }
-
-  .nav-container a.icon {
-    float: right;
-    display: block;
-    padding-left: 290px; } }
-@media screen and (max-width: 600px) {
-  .nav-container.responsive {
-    position: relative;
-    display: flex;
-    flex-direction: column; }
-
-  .nav-container.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0; }
-
-  .nav-container.responsive .nav-item {
-    float: none;
-    display: block; }
-
-  .nav-item {
-    flex: none; }
-
-  .stewsLogo {
-    border-top: white solid 1px;
-    text-align: center; } }
 /************* SLIDER STYLERS *************/
 .slider .mySlides {
   height: 90vh; }
+@media only screen and (min-width: 768px) {
+  .slider {
+    width: 100%; } }
 
 /*********** INDEX STYLES ***********/
 body {
@@ -118,10 +165,10 @@ body {
 .service-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 70px; }
 
 .service-wrapper > .service-blocks {
-  width: 500px;
   margin: 35px;
   text-align: center;
   position: relative;
@@ -137,17 +184,45 @@ body {
     width: 100%;
     color: white;
     text-shadow: 2px 2px 12px #030303;
-    font-size: 2.8em;
+    font-size: 1.8em;
     letter-spacing: 5px; }
+    @media only screen and (min-width: 768px) {
+      .service-wrapper > .service-blocks .centered {
+        font-size: 1.3em; } }
+    @media only screen and (min-width: 1024px) {
+      .service-wrapper > .service-blocks .centered {
+        font-size: 1.6em; } }
+    @media only screen and (min-width: 1440px) {
+      .service-wrapper > .service-blocks .centered {
+        font-size: 2.1em; } }
 
 /* Service Wrapper Media Query */
-@media screen and (max-width: 600px) {
-  .service-wrapper {
-    display: flex;
-    flex-direction: column; }
+.service-wrapper {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 768px) {
+    .service-wrapper {
+      flex-direction: row; } }
+  .service-wrapper .service-blocks a img {
+    width: 250px;
+    height: 165.5px; }
+    @media only screen and (min-width: 320px) {
+      .service-wrapper .service-blocks a img {
+        width: 300px;
+        height: 200px; } }
+    @media only screen and (min-width: 768px) {
+      .service-wrapper .service-blocks a img {
+        width: 180px;
+        height: 165px; } }
+    @media only screen and (min-width: 1024px) {
+      .service-wrapper .service-blocks a img {
+        width: 235px;
+        height: 215px; } }
+    @media only screen and (min-width: 1440px) {
+      .service-wrapper .service-blocks a img {
+        width: 350px;
+        height: 300px; } }
 
-  .centered {
-    font-size: 2.5em !important; } }
 .location-wrapper, .announcement-wrapper, .about-wrapper {
   text-align: center;
   width: 100%; }
@@ -157,6 +232,9 @@ body {
     letter-spacing: 3px;
     color: #AC2A29;
     margin-bottom: 30px; }
+    @media only screen and (min-width: 320px) {
+      .location-wrapper p, .announcement-wrapper p, .about-wrapper p {
+        font-size: 2.8em; } }
   .location-wrapper p + p, .announcement-wrapper p + p, .about-wrapper p + p {
     font-size: 20px;
     color: black;
@@ -165,9 +243,41 @@ body {
     line-height: 1.5;
     margin: auto;
     width: 59%; }
+    @media only screen and (min-width: 320px) {
+      .location-wrapper p + p, .announcement-wrapper p + p, .about-wrapper p + p {
+        font-size: 1em;
+        width: 90%; } }
+    @media only screen and (min-width: 1024px) {
+      .location-wrapper p + p, .announcement-wrapper p + p, .about-wrapper p + p {
+        font-size: 1.1em; } }
+    @media only screen and (min-width: 1440px) {
+      .location-wrapper p + p, .announcement-wrapper p + p, .about-wrapper p + p {
+        font-size: 1.3em; } }
+
+@media only screen and (min-width: 320px) {
+  .location-wrapper p {
+    font-size: 2em; }
+  .location-wrapper img {
+    width: 300px;
+    height: 250px;
+    justify-content: center;
+    align-items: center; } }
+  @media only screen and (min-width: 320px) and (min-width: 1440px) {
+    .location-wrapper img {
+      width: 425px;
+      height: 375px; } }
 
 iframe {
   margin-top: 80px; }
+
+.facebook_iframe {
+  width: 320px; }
+  @media only screen and (min-width: 425px) {
+    .facebook_iframe {
+      width: 400px; } }
+  @media only screen and (min-width: 570px) {
+    .facebook_iframe {
+      width: 500px; } }
 
 .cta-banner {
   margin-top: 75px;
@@ -184,7 +294,7 @@ iframe {
     width: 100%;
     color: white;
     text-shadow: 2px 2px 12px #030303;
-    font-size: 4em;
+    font-size: 2.3em;
     letter-spacing: 7px;
     text-align: center; }
 
@@ -224,6 +334,14 @@ footer {
   flex-wrap: wrap;
   overflow: hidden;
   margin-top: 105px; }
+  @media only screen and (min-width: 768px) {
+    footer {
+      display: inherit;
+      flex-wrap: inherit; } }
+  @media only screen and (min-width: 768px) {
+    footer .footerGroup {
+      display: flex;
+      flex-direction: row; } }
   footer .footer-item {
     flex: 1 1 20em;
     border-top: 1px solid #aba69b;
@@ -236,6 +354,9 @@ footer {
   footer .block {
     margin: auto;
     display: inline-flex; }
+    @media only screen and (min-width: 320px) {
+      footer .block {
+        font-size: 13px; } }
   footer .elements {
     flex-direction: column; }
     footer .elements .login {
@@ -244,7 +365,10 @@ footer {
   footer .footer-copyright {
     padding: 0; }
     footer .footer-copyright .copyright {
-      font-size: 14px; }
+      font-size: 8px; }
+      @media only screen and (min-width: 320px) {
+        footer .footer-copyright .copyright {
+          font-size: 10px; } }
   footer .fa.fa-facebook-f {
     color: white;
     font-size: 2em;

@@ -42,7 +42,7 @@
     </div>
 
     <div class="announcement-wrapper">
-        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheSmokeShackByStew%2F&tabs=timeline&width=500&height=650&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="500" height="650" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTheSmokeShackByStew%2F&tabs=timeline&width=500&height=650&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" class="facebook_iframe" width="500" height="650" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
     </div> 
 
     <div id="about" class="about-wrapper">
@@ -53,7 +53,7 @@
 
     <?php require 'base/public/footer.php'; ?>
 
-    <script src="js/slideshow.js"></script>
+        <script src="js/slideshow.js"></script>
 
 </body>
 </html>

@@ -1,3 +1,5 @@
+//any javascript relating to the slideshow
+
 var myIndex = 0;
 carousel();
 
@@ -19,18 +21,7 @@ function carousel() {
     }  
 
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 3000); // Change image every 2 seconds
+    setTimeout(carousel, 3000); // Change image every 3 seconds
 }
-
-
-
-function myFunction() {
-    var x = document.getElementById("myTopNav");
-    if (x.className === "nav-container") {
-      x.className += " responsive";
-    } else {
-      x.className = "nav-container";
-    }
-  }
 
 

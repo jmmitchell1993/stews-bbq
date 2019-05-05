@@ -1,0 +1,44 @@
+//media queries
+
+
+@mixin phoneMedium {
+    @media only screen and (min-width: 320px){
+       @content;
+    }
+}
+
+@mixin phoneLarge {
+    @media only screen and (min-width: 425px){
+       @content;
+    }
+}
+
+@mixin smallTablet {
+    @media only screen and (min-width: 570px){
+       @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 768px){
+       @content;
+    }
+}
+
+@mixin laptop {
+    @media only screen and (min-width: 1024px){
+       @content;
+    }
+}
+
+@mixin laptopLarge {
+    @media only screen and (min-width: 1440px){
+       @content;
+    }
+}
+
+@mixin fourK {
+    @media only screen and (min-width: 2560px){
+       @content;
+    }
+}
