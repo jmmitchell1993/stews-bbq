@@ -25,6 +25,7 @@
     affect every selector that it is attributed to.
 
 */
+
 @import "_media_queries";
 
 * {
@@ -45,27 +46,73 @@
     .title_catering {
         font-size: 2.8em;
         font-family: 'Stew-Light';
+        text-align: center;
+
+        @include phoneLarge{
+            padding: 0 10px;
+        }
+
+        @include laptopLarge{
+            font-size: 3.6em;
+        }
     }
     
     .phone_number_catering {
         font-family: 'Stew-Light';
+        text-align: center;
+        font-size: 1em;
+
+        @include tablet{
+            font-size: 1.4em;
+        }
+
+        @include laptopLarge{
+            font-size: 1.6em;
+        }
     }
 }
 
 /************Delivery Styles*************/
 .title_delivery{
     text-align: center;
+    font-size: 2.6em;
 }
 .phone_number_delivery{
     text-align: center;
+    font-size: 1.4em;
 }
 .delivery_container{
 
+    margin-top: 40px;
     width: 100%;
     // height: 100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-direction: column;
+
+    .delivery_stack-one{
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+        }
+
+    }
+
+    .delivery_stack-two{
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+        }
+
+    }
+
+    @include laptop{
+        flex-direction: row;
+        margin-top: 80px;
+    }
 
     .delivery_items{
         display: flex;
@@ -73,9 +120,79 @@
         align-items:center;
         flex-direction: column;
 
-        .delivery_name-link{
-            text-align: center;
+        @include tablet{
+            margin: 30px;
         }
+
+        @include laptop{
+            margin: 10px;
+        }
+
+        img + img{
+            margin-top: 15px;
+
+            @include laptopLarge{
+                margin-left: 50px;
+            }
+        }
+
+        @include tablet{
+            .img_mytown + .img_doordash{
+                margin: 0 500px;
+            }
+        }
+
+        .img_mytown{
+
+            height: 165px;
+            width: 165px;
+
+            @include tablet{
+                height: 180px;
+                width: 180px;
+            }
+
+            @include laptop{
+                height: 165px;
+                width: 165px;
+            }
+
+            @include laptopLarge{
+                height: 200px;
+                width: 200px;
+            }
+        }
+
+        .img_doordash{
+            height: 110px;
+            width: 250px;
+
+            @include laptopLarge{
+                height: 160px;
+                width: 300px;
+            }
+        }
+
+        .img_grubhub{
+            height: 68px;
+            width: 280px;
+
+            @include laptopLarge{
+                height: 108;
+                width: 320;
+            }
+        }
+
+        .img_seamless{
+            width: 250px;
+            height: 123px;
+
+            @include laptopLarge{
+               width: 300px;
+                height: 173px; 
+            }
+        }
+
     }
 }
 
@@ -160,6 +277,11 @@
       position: relative;
       display: flex;
       flex-direction: column;
+      height: 100vh;
+
+        .stewsLogo{
+            display: none;
+        }
     }
     .nav-container.responsive a.icon {
       position: absolute;
@@ -204,11 +326,6 @@
   .fa {
     font-size: 3.5em;
     color: white;
-  }
-
-  @include phoneMedium{
-
-    
   }
 
 /************* SLIDER STYLERS *************/ 
@@ -370,7 +487,9 @@ body {
     .location-wrapper{
 
         p{
-            font-size: 2em;
+            font-size: 1.5em;
+            padding-right: 10px;
+            padding-left: 10px;
         }
 
         img{
@@ -492,6 +611,18 @@ footer {
 
     }
 
+    .location_phone{
+        display: flex;
+        flex-direction: column;
+    }
+
+    *[x-apple-data-detectors] {
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+
     .footer-item {
         flex: 1 1 20em;
         border-top: 1px solid #aba69b;
@@ -501,14 +632,29 @@ footer {
         padding: 40px;
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.5;
-    }
 
-    .block {
-        margin: auto;
-        display: inline-flex;
+        .phone_number{
+            text-decoration: none;
+            color: white;
+        }
 
-        @include phoneMedium{
-            font-size: 13px;
+        .block{
+            line-height: 120%;
+            margin: auto;
+            display: inline-flex;
+
+            @include phoneMedium{
+                font-size: .6em;
+            }
+
+            @include tablet{
+                font-size: 1em;
+            }
+        }
+
+        .hours{
+            padding-right: 15px;
+            padding-left: 15px;
         }
     }
 
@@ -528,7 +674,11 @@ footer {
             font-size: 8px;
 
             @include phoneMedium{
-                font-size: 10px;
+                font-size: .6em;
+            }
+
+            @include tablet{
+                font-size: .8em;
             }
         }
     }
@@ -538,6 +688,7 @@ footer {
         color: white;
         font-size: 2em;
         margin-top: -2px;
+        margin: 0 25px;
 
         &:hover {
             color: #3c5a99;

@@ -2,11 +2,12 @@
 
 <div class="footerGroup"> 
     <div class="footer-item">
-        <p class="block">
+        <p class="block location_phone">
             2511 Cottage Grove<br>
             Des Moines, Iowa 50311<br>
-            (515) 277-0005
-        </p>
+            515-277-0005
+            <!-- <a href="#" ><br><br></a> -->
+        </p>        
     </div>
     <div class="footer-item">
         <p class="block hours">
@@ -21,7 +22,14 @@
     <div class="footer-item">
         <div class="block elements">
             <a href="https://www.facebook.com/TheSmokeShackByStew/"><i class="fa fa-facebook-f"></i></a><br>
-            <a href="#" class="login">Admin Login</a>
+            
+            
+        <!-- admin login implement when added -->
+
+            <!-- <a href="#" class="login">Admin Login</a> -->
+            
+        <!-- ************************************************** -->
+            
         </div>
     </div>
 </div>
@@ -33,5 +41,6 @@
             Copyright &#169; 2019 Stew's Smoke Shack. All Rights Reserved.
         </p>
     </div>
+
     
 </footer>

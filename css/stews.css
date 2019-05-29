@@ -34,29 +34,108 @@
   flex-direction: column; }
   .container .title_catering {
     font-size: 2.8em;
-    font-family: 'Stew-Light'; }
+    font-family: 'Stew-Light';
+    text-align: center; }
+    @media only screen and (min-width: 425px) {
+      .container .title_catering {
+        padding: 0 10px; } }
+    @media only screen and (min-width: 1440px) {
+      .container .title_catering {
+        font-size: 3.6em; } }
   .container .phone_number_catering {
-    font-family: 'Stew-Light'; }
+    font-family: 'Stew-Light';
+    text-align: center;
+    font-size: 1em; }
+    @media only screen and (min-width: 768px) {
+      .container .phone_number_catering {
+        font-size: 1.4em; } }
+    @media only screen and (min-width: 1440px) {
+      .container .phone_number_catering {
+        font-size: 1.6em; } }
 
 /************Delivery Styles*************/
 .title_delivery {
-  text-align: center; }
+  text-align: center;
+  font-size: 2.6em; }
 
 .phone_number_delivery {
-  text-align: center; }
+  text-align: center;
+  font-size: 1.4em; }
 
 .delivery_container {
+  margin-top: 40px;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column; }
+  @media only screen and (min-width: 768px) {
+    .delivery_container .delivery_stack-one {
+      display: flex;
+      flex-direction: row; } }
+  @media only screen and (min-width: 768px) {
+    .delivery_container .delivery_stack-two {
+      display: flex;
+      flex-direction: row; } }
+  @media only screen and (min-width: 1024px) {
+    .delivery_container {
+      flex-direction: row;
+      margin-top: 80px; } }
   .delivery_container .delivery_items {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-    .delivery_container .delivery_items .delivery_name-link {
-      text-align: center; }
+    @media only screen and (min-width: 768px) {
+      .delivery_container .delivery_items {
+        margin: 30px; } }
+    @media only screen and (min-width: 1024px) {
+      .delivery_container .delivery_items {
+        margin: 10px; } }
+    .delivery_container .delivery_items img + img {
+      margin-top: 15px; }
+      @media only screen and (min-width: 1440px) {
+        .delivery_container .delivery_items img + img {
+          margin-left: 50px; } }
+    @media only screen and (min-width: 768px) {
+      .delivery_container .delivery_items .img_mytown + .img_doordash {
+        margin: 0 500px; } }
+    .delivery_container .delivery_items .img_mytown {
+      height: 165px;
+      width: 165px; }
+      @media only screen and (min-width: 768px) {
+        .delivery_container .delivery_items .img_mytown {
+          height: 180px;
+          width: 180px; } }
+      @media only screen and (min-width: 1024px) {
+        .delivery_container .delivery_items .img_mytown {
+          height: 165px;
+          width: 165px; } }
+      @media only screen and (min-width: 1440px) {
+        .delivery_container .delivery_items .img_mytown {
+          height: 200px;
+          width: 200px; } }
+    .delivery_container .delivery_items .img_doordash {
+      height: 110px;
+      width: 250px; }
+      @media only screen and (min-width: 1440px) {
+        .delivery_container .delivery_items .img_doordash {
+          height: 160px;
+          width: 300px; } }
+    .delivery_container .delivery_items .img_grubhub {
+      height: 68px;
+      width: 280px; }
+      @media only screen and (min-width: 1440px) {
+        .delivery_container .delivery_items .img_grubhub {
+          height: 108;
+          width: 320; } }
+    .delivery_container .delivery_items .img_seamless {
+      width: 250px;
+      height: 123px; }
+      @media only screen and (min-width: 1440px) {
+        .delivery_container .delivery_items .img_seamless {
+          width: 300px;
+          height: 173px; } }
 
 /*********** NAV STYLES ***********/
 .nav-container {
@@ -113,7 +192,10 @@
 .nav-container.responsive {
   position: relative;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 100vh; }
+  .nav-container.responsive .stewsLogo {
+    display: none; }
 
 .nav-container.responsive a.icon {
   position: absolute;
@@ -256,7 +338,9 @@ body {
 
 @media only screen and (min-width: 320px) {
   .location-wrapper p {
-    font-size: 2em; }
+    font-size: 1.5em;
+    padding-right: 10px;
+    padding-left: 10px; }
   .location-wrapper img {
     width: 300px;
     height: 250px;
@@ -342,6 +426,14 @@ footer {
     footer .footerGroup {
       display: flex;
       flex-direction: row; } }
+  footer .location_phone {
+    display: flex;
+    flex-direction: column; }
+  footer *[x-apple-data-detectors] {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important; }
   footer .footer-item {
     flex: 1 1 20em;
     border-top: 1px solid #aba69b;
@@ -351,12 +443,22 @@ footer {
     padding: 40px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5; }
-  footer .block {
-    margin: auto;
-    display: inline-flex; }
-    @media only screen and (min-width: 320px) {
-      footer .block {
-        font-size: 13px; } }
+    footer .footer-item .phone_number {
+      text-decoration: none;
+      color: white; }
+    footer .footer-item .block {
+      line-height: 120%;
+      margin: auto;
+      display: inline-flex; }
+      @media only screen and (min-width: 320px) {
+        footer .footer-item .block {
+          font-size: .6em; } }
+      @media only screen and (min-width: 768px) {
+        footer .footer-item .block {
+          font-size: 1em; } }
+    footer .footer-item .hours {
+      padding-right: 15px;
+      padding-left: 15px; }
   footer .elements {
     flex-direction: column; }
     footer .elements .login {
@@ -368,11 +470,15 @@ footer {
       font-size: 8px; }
       @media only screen and (min-width: 320px) {
         footer .footer-copyright .copyright {
-          font-size: 10px; } }
+          font-size: .6em; } }
+      @media only screen and (min-width: 768px) {
+        footer .footer-copyright .copyright {
+          font-size: .8em; } }
   footer .fa.fa-facebook-f {
     color: white;
     font-size: 2em;
-    margin-top: -2px; }
+    margin-top: -2px;
+    margin: 0 25px; }
     footer .fa.fa-facebook-f:hover {
       color: #3c5a99; }
 

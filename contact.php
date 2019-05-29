@@ -102,7 +102,7 @@
             </div>
         </div>
         <?php require 'base/public/footer.php'; ?>
-
+        <script src="js/navigation.js"></script>
     <script type="text/javascript">
 
     //autofocus errors

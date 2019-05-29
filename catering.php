@@ -22,6 +22,6 @@
 
 
     <?php require 'base/public/footer.php'; ?>
-    
+    <script src="js/navigation.js"></script>
 </body>
 </html>
